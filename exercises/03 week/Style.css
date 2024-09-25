@@ -3,9 +3,27 @@ body{
 }
 
 p{
-    color: coral;
-    text-align: left;
+    color: red;
     font-size: large;
+}
 
-      
+.my-class{
+    color: blue;
+    font-style: oblique;
+}
+
+li{
+    color: blueviolet;
+}
+.wrapper li {
+    color: green;
+}
+
+.wrapper > p {
+    color: orange;
+    font-style: italic;
+}
+
+.wrapper a:link{
+    color: yellow;
 }
