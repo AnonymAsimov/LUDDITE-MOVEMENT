@@ -7,7 +7,14 @@
 
 /* 3. Change the text color for the paragraph element to #EB7F00*/
 
+body{
+    background-color: #1695A3*;
+    color: #ffffff*;    
+}
 
+p{
+    color: #EB7F00*;
+}
 
 /*------ PART 2 -------------------------*/
 /*1. Center the h3*/
