@@ -1,6 +1,11 @@
+body{
+    background-color: lightblue;
+}
+
 p{
-    color: steelblue;
-    font-size: 48px;
-    
+    color: coral;
+    text-align: left;
+    font-size: large;
+
       
 }
