@@ -7,13 +7,16 @@
 
 /* 3. Change the text color for the paragraph element to #EB7F00*/
 
+
 body{
-    background-color: #1695A3*;
-    color: #ffffff*;    
+    background-color: #1695A3;
+    color: #FFFFFF;
 }
 
 p{
-    color: #EB7F00*;
+    color: #EB7F00;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 /*------ PART 2 -------------------------*/
@@ -27,3 +30,7 @@ p{
 
 
 /*4. Remove the default underline from the anchor tag below*/
+
+h3{
+    text-align: center;
+}
