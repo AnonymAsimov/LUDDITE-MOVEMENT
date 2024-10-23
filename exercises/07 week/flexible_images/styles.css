@@ -1,0 +1,96 @@
+/* reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100vh;
+  }
+  
+/* type */
+
+body {
+    font-family: times, serif;
+    text-align: center;
+    font-size: 38px;
+    line-height: 1.2;
+    color: #F6F6F2;
+}
+
+/* structure */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* first section */
+
+.tint {
+    background: url("https://cdn.theasc.com/Rope-Cast-Set-Photo.jpg");
+}
+
+section.first {
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* second section */
+
+section.second {
+    background: #CCC2B6;
+    height: 100vh;
+    color: #776045;
+}
+
+/* third section */
+
+section.third {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center on the page */
+    align-items: center; /* horizontally center on the page */
+}
+
+.card-wrapper img {
+    width: 100px;
+    height: 500px;
+    object-fit: scale-down;
+}
+/* typography */
+
+h1 {
+    font-size: 11vw;
+    font-weight: normal;
+    margin-top: 100px;
+}
+
+h4 {
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin-bottom: .5em;
+    margin: 0 150px;
+}
+
+/* custom fonts */
+
+@font-face {
+    font-family: 'burgess-regular';
+    src: url('../fonts/burgess-regular.eot');
+    src: url('../fonts/burgess-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/burgess-regular.woff') format('woff'),
+         url('../fonts/burgess-regular.woff2') format('woff2'),
+         url('../fonts/burgess-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.burgess {
+    font-family: "burgess-regular", serif;
+}

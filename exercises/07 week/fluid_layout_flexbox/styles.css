@@ -1,0 +1,51 @@
+:root {
+    --white: #F4F4F4;
+    --black: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--black);
+}
+
+.flex-container {
+    display: flex; /* the parent of header, main and footer */
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header,
+footer {
+    height: 60px;
+}
+
+main {
+    flex: 1;
+    display: flex; /* the parent of aside and section */
+}
+
+aside {
+    flex-basis: 25%;
+}
+
+section {
+    flex-basis: 75%;
+}
+
+/*
+
+    @media screen and (max-width: 600px) {
+        main {
+            flex-direction: column;
+        }
+        aside, section {
+            flex: 1; 
+        }
+    }
+
+*/
