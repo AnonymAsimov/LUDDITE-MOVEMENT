@@ -1,0 +1,194 @@
+/* 공통 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 바디 배경을 완전 검은색으로 */
+  body {
+    font-family: sans-serif;
+    background-color: #000; /* 검은색 배경 */
+    color: #ccc; /* 어둡고 차분한 느낌의 텍스트 컬러 */
+    line-height: 1.6;
+  }
+  
+  /* 헤더 스타일 */
+  .header {
+    padding: 1rem;
+    background-color: #111; /* 더욱 짙은 검정 계열 */
+    color: #fff;
+    text-align: center;
+  }
+  
+  .header h1 {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* 필터 버튼 */
+  .filter-buttons button {
+    margin: 0 5px;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #555;
+  }
+  
+  /* 검색창 컨테이너 */
+  .search-container {
+    margin-top: 0.75rem;
+    display: inline-block;
+  }
+  
+  .search-container input {
+    padding: 0.5rem;
+    margin-right: 5px;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .search-container button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .search-container button:hover {
+    background-color: #555;
+  }
+  
+  /* 그리드 레이아웃 */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* 프로필 카드 */
+  .profile-card {
+    background-color: #1a1a1a; /* 짙은 회색 배경으로 어둡게 */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1); /* 살짝 밝은 그림자 */
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    text-align: center;
+    color: #eee; /* 밝은 텍스트 */
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* 이미지: 그리드에 꽉 차게, 흑백 처리 */
+  .profile-card img {
+    display: block;
+    width: 100%;
+    height: 200px;   /* 필요에 맞게 조절 가능 */
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  
+  .profile-card:hover img {
+    filter: grayscale(0%);
+  }
+  
+  /* 카드 내부 텍스트 스타일 */
+  .profile-card h3 {
+    background-color: #2c2c2c; 
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  /* 사망 원인에 따른 강조용 클래스 */
+  .accident {
+    outline: 3px solid red;
+  }
+  
+  .drug {
+    outline: 3px solid green;
+  }
+  
+  .disease {
+    outline: 3px solid blue;
+  }
+  
+  /* 팝업(Modal) 오버레이 */
+  .overlay {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8); /* 좀 더 진한 반투명 검정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 팝업 컨텐츠 */
+  .popup-content {
+    background: #000; /* 완전 검정 배경 */
+    color: #fff;      /* 흰색 텍스트 */
+    padding: 20px;
+    width: 600px;     /* 지도 등 배치를 위해 폭을 좀 넓힘 */
+    max-width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.1); /* 밝은 그림자 */
+  }
+  
+  /* 닫기 버튼 */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* 팝업 상단부: 사진 + 지도 */
+  .popup-top {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  
+  /* 지도 영역 */
+  .popup-map {
+    width: 300px;
+    height: 200px;
+    background: #333; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+  }
+  
+  /* 팝업 내부 프로필 사진 */
+  .popup-photo {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+  }
+  
