@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Famous People Archive</title>
-
-  <!-- style.css -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Leaflet CSS -->
-  <link 
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-VQGwvP1UW3/AX8KQ5VmcA+P0F3CJUf1AGFlwX1PqCzo="
-    crossorigin=""
-  />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header class="header">
     <h1>Famous People Archive</h1>
+
     <div class="filter-buttons">
       <button onclick="highlightCause('Car Accident')">Car Accident</button>
       <button onclick="highlightCause('Drug Overdose')">Drug Overdose</button>
@@ -26,6 +17,7 @@
       <button onclick="highlightCause('none')">Reset Filter</button>
     </div>
 
+    <!-- 이름 검색 기능 추가 (검색 창 + 버튼들) -->
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="Search by Name" />
       <button onclick="searchByName()">Search</button>
@@ -35,18 +27,15 @@
 
   <main>
     <div class="grid-container" id="grid-container">
-      <!-- JS가 여기에 프로필 카드 생성 -->
+      <!-- 프로필 카드가 JS에서 동적으로 생성 -->
     </div>
   </main>
 
-  <!-- 팝업 -->
+  <!-- 팝업 영역 -->
   <div id="popup-overlay" class="overlay" style="display: none;">
     <div class="popup-content">
       <span class="close-btn" id="close-btn">&times;</span>
-      <div class="popup-top">
-        <img id="popup-photo" src="" alt="" class="popup-photo"/>
-        <div id="map" class="popup-map"></div>
-      </div>
+      <img id="popup-photo" src="" alt="" class="popup-photo"/>
       <h2 id="popup-name"></h2>
       <p id="popup-birth"></p>
       <p id="popup-death"></p>
@@ -55,14 +44,6 @@
     </div>
   </div>
 
-  <!-- Leaflet JS -->
-  <script 
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-XQoYMqMTK8Lvdl+M2xCPwHT1KZ+Jr2LlfWPgU04xyOo="
-    crossorigin=""
-  ></script>
-
-  <!-- 메인 스크립트 -->
   <script src="script.js"></script>
 </body>
 </html>
