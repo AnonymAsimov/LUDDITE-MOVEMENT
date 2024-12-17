@@ -8,16 +8,17 @@
 </head>
 <body>
   <header class="header">
-    <h1>Famous People Archive</h1>
+    <h1>FAMOUS PEOPLE ACRHIVE</h1>
 
     <div class="filter-buttons">
-      <button onclick="highlightCause('Car Accident')">Car Accident</button>
-      <button onclick="highlightCause('Drug Overdose')">Drug Overdose</button>
-      <button onclick="highlightCause('Disease')">Disease</button>
+      <button onclick="highlightCause('accident')">Accident</button>
+      <button onclick="highlightCause('drug overdose')">Drug Overdose</button>
+      <button onclick="highlightCause('disease')">Disease</button>
+      <button onclick="highlightCause('suicide')">Suicide</button>
       <button onclick="highlightCause('none')">Reset Filter</button>
     </div>
 
-    <!-- 이름 검색 기능 추가 (검색 창 + 버튼들) -->
+    <!-- 이름 검색 기능 -->
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="Search by Name" />
       <button onclick="searchByName()">Search</button>
@@ -35,12 +36,16 @@
   <div id="popup-overlay" class="overlay" style="display: none;">
     <div class="popup-content">
       <span class="close-btn" id="close-btn">&times;</span>
-      <img id="popup-photo" src="" alt="" class="popup-photo"/>
-      <h2 id="popup-name"></h2>
-      <p id="popup-birth"></p>
-      <p id="popup-death"></p>
-      <p id="popup-cause"></p>
-      <p id="popup-bio"></p>
+      <div class="popup-left">
+        <img id="popup-photo" src="" alt="" class="popup-photo"/>
+      </div>
+      <div class="popup-right">
+        <h2 id="popup-name"></h2>
+        <p id="popup-birth"></p>
+        <p id="popup-death"></p>
+        <p id="popup-cause"></p>
+        <p id="popup-bio"></p>
+      </div>
     </div>
   </div>
 
